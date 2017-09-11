@@ -1,0 +1,7 @@
+.modal {
+  height: 100%;
+  max-height: 70%;
+  max-width: 450px;
+  overflow: hidden;
+  background: #000;
+}

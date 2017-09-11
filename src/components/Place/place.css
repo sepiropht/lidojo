@@ -1,0 +1,144 @@
+.container-place {
+  text-align: center;
+  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+}
+h1 {
+   font-weight: 600;
+   font-size: 40px;
+   line-height: 50px;
+   color: #f2f2f2;
+   margin-bottom: 10px;
+
+}
+h2 {
+  border-bottom: 2px solid #000;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.more-datails {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #3c3c3c;
+  padding-bottom: 20px;
+  padding: 10px;
+}
+.pres-img {
+ border: 1px solid red;
+ margin: 0 auto;
+ width : 99%;
+}
+
+.note {
+  margin: 50px 0px 50px 0px;
+  text-align: left;
+  padding: 10px;
+}
+.description {
+  color: #929292;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+  font-weight: 400;
+  padding: 10px;
+}
+  .info-map {
+    display: flex;
+   flex-direction: column
+}
+  .info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: #121212;
+    padding: 20px 10px 10px 20px;
+
+}
+div.info span {
+}
+
+div.info span:nth-child(odd) {
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 100%;
+    font-weight: 600;
+    color: #7d7d7d;
+    margin-bottom: 5px;
+}
+div.info span:nth-child(even) {
+    padding-top: 0;
+    font-size: 17px;
+    width: 100%;
+    font-weight: 400;
+    color: #f2f2f2;
+    margin-bottom: 20px;
+}
+div.info span:last-child {
+  margin-top: 30px
+}
+
+.call-actions {
+  position: absolute;
+  top:40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  height: 70px;
+  width: 100%
+}
+
+.call-actions > div > img {
+  height: 30px;
+  margin-top: 10px;
+  width: 30px;
+}
+.call-actions > div > span {
+  display: none
+}
+
+
+@media (min-width: 651px) {
+  .info-map {
+  display: flex;
+  
+}
+  .info {
+  border-radius: 3px;
+  margin-right: 20px;
+  padding: 14px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: #121212;
+}
+div.info span {
+  margin-bottom: 20px;
+}
+div.info span:last-child {
+  align-self: flex-end;
+}
+div.info span:first-child {
+  margin-top: 30px;
+}
+.call-actions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  }
+
+.call-actions div {
+  background-color: #121212;
+  margin: 5px;
+  height: 50px;
+  width: 30%;
+}
+}

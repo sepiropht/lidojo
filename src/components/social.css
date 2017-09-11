@@ -1,0 +1,13 @@
+.social-links {
+  margin: 0 auto;
+
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+li {
+    
+    padding: 15px!important;
+}
