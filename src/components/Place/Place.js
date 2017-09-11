@@ -4,6 +4,14 @@ import Portal from "react-portal";
 import "./place.css";
 import fakeApi from "../../fake-api";
 import { urlApi } from "../../fake-api";
+import Modal from "../Modal/Modal";
+
+const button1 = (
+  <div onClick={() => console.log("clicked")}>
+    <img src="https://www.dojoapp.fr/plus-icon.svg" />
+    <span>Ajouter à une liste</span>
+  </div>
+);
 
 export default class PlaceContainer extends Component {
   constructor({ match }) {
@@ -47,7 +55,13 @@ const Calendar = dates => {
 const Place = placeq => {
   if (!placeq.place) return <div />;
 
+  const button2 = (
+    <button onClick={() => console.log("button1 clicked")}>
+      {" "}Ajouter une liste{" "}
+    </button>
+  );
   const place = placeq.place;
+
   let text1 = place.tip.text.split("<br/><br/>")[0];
   let text2 = place.tip.text.split("<br/><br/>")[1];
 
@@ -131,10 +145,25 @@ const Place = placeq => {
           <img src="https://www.dojoapp.fr/whiteicons/link.svg" />
           <span> copier l'url'</span>
         </div>
-        <div>
-          <img src="https://www.dojoapp.fr/plus-icon.svg" />
-          <span>Ajouter à une liste</span>
-        </div>
+        <Portal closeOnEsc openByClickOn={button1}>
+          <Modal>
+            <h2>Pseudo Modal</h2>
+            <p>This react component is appended to the document body.</p>
+            <p>
+              This is{" "}
+              <strong>
+                great for a modal, lightbox, loading bar ... etc.
+              </strong>.
+            </p>
+            <p>
+              Close this by pressing <strong>ESC</strong>.
+            </p>
+            <p>
+              <strong>Why psuedo?</strong> Because the proper CSS styles are up
+              to you. ;-)
+            </p>
+          </Modal>
+        </Portal>
       </div>
     </div>
   );

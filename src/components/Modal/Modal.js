@@ -1,35 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Portal from 'react-portal';
+import React from "react";
 
-export default class App extends React.Component {
-
+export default class Modal extends React.Component {
+  // eslint-disable-line
   render() {
-    const button1 = <button>Open portal with pseudo modal</button>;
-
+    console.log("Yeah dans la modal");
     return (
-      <Portal closeOnEsc closeOnOutsideClick openByClickOn={button1}>
-        <PseudoModal>
-          <h2>Pseudo Modal</h2>
-          <p>This react component is appended to the document body.</p>
-        </PseudoModal>
-      </Portal>
-    );
-  }
-
-}
-
-export class PseudoModal extends React.Component {
-
-  render() {
-    return (
-      <div>
+      <div
+        style={{
+          border: "1px solid green",
+          width: "100%",
+          height: "100%",
+          position: "absolute",
+          top: "0px",
+          backgroundColor: "black"
+        }}
+      >
         {this.props.children}
-        <p><button onClick={this.props.closePortal}>Close this</button></p>
+        <p>
+          <button onClick={this.props.closePortal}>Close this</button>
+        </p>
       </div>
     );
   }
-
 }
-
-ReactDOM.render(<App />, document.getElementById('react-body'));
