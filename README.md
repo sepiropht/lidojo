@@ -1,5 +1,7 @@
 # clone-dojo
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/sepiropht/lidojo.svg)](https://greenkeeper.io/)
+
 [Edit this project on StackBlitz](https://stackblitz.com/edit/clone-dojo)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
